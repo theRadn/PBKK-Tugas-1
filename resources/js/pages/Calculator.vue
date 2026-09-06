@@ -1,24 +1,24 @@
 <template>
     <div
-        class="flex flex-col sm:flex-row gap-4 items-center justify-center mx-auto py-10 font-sans min-h-screen"
+        class="mx-auto flex min-h-screen flex-col items-center justify-center gap-4 py-10 font-sans sm:flex-row"
     >
         <!-- Calculator -->
         <div
-            class="w-80 md:w-84 p-4 bg-gray-900 rounded-2xl shadow-2xl text-gray-100 min-w-0"
+            class="w-80 min-w-0 rounded-2xl bg-gray-900 p-4 text-gray-100 shadow-2xl md:w-84"
         >
             <!-- Display Screen -->
             <div
-                class="bg-black/40 border border-gray-700/50 p-4 rounded-xl mb-4 text-right flex flex-col justify-end h-24 min-w-0 w-full overflow-hidden"
+                class="mb-4 flex h-24 w-full min-w-0 flex-col justify-end overflow-hidden rounded-xl border border-gray-700/50 bg-black/40 p-4 text-right"
             >
                 <div
-                    class="text-gray-400 text-xs md:text-sm tracking-wider h-4 md:h-6 overflow-hidden w-full"
+                    class="h-4 w-full overflow-hidden text-xs tracking-wider text-gray-400 md:h-6 md:text-sm"
                 >
                     {{ previousOperation }}
                 </div>
                 <div
-                    class="text-xl md:text-2xl font-bold tracking-wide truncate w-full"
+                    class="w-full truncate text-xl font-bold tracking-wide md:text-2xl"
                 >
-                    {{ currentInput || "0" }}
+                    {{ currentInput || '0' }}
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                             ? 'scale-95 bg-gray-600'
                             : 'bg-gray-700'
                     "
-                    class="col-span-2 hover:bg-gray-600 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="col-span-2 rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-600 active:scale-95"
                 >
                     C
                 </button>
@@ -44,14 +44,14 @@
                             ? 'scale-95 bg-gray-600'
                             : 'bg-gray-700'
                     "
-                    class="hover:bg-gray-600 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-600 active:scale-95"
                 >
                     DEL
                 </button>
                 <button
                     @click="chooseOperation('/')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '/' }"
-                    class="bg-amber-500 hover:bg-amber-600 text-white font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
                 >
                     /
                 </button>
@@ -63,7 +63,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     7
                 </button>
@@ -74,7 +74,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     8
                 </button>
@@ -85,14 +85,14 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     9
                 </button>
                 <button
                     @click="chooseOperation('*')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '*' }"
-                    class="bg-amber-500 hover:bg-amber-600 text-white font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
                 >
                     *
                 </button>
@@ -104,7 +104,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     4
                 </button>
@@ -115,7 +115,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     5
                 </button>
@@ -126,14 +126,14 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     6
                 </button>
                 <button
                     @click="chooseOperation('-')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '-' }"
-                    class="bg-amber-500 hover:bg-amber-600 text-white font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
                 >
                     -
                 </button>
@@ -145,7 +145,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     1
                 </button>
@@ -156,7 +156,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     2
                 </button>
@@ -167,14 +167,14 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     3
                 </button>
                 <button
                     @click="chooseOperation('+')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '+' }"
-                    class="bg-amber-500 hover:bg-amber-600 text-white font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
                 >
                     +
                 </button>
@@ -186,7 +186,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="col-span-2 hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="col-span-2 rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     0
                 </button>
@@ -197,7 +197,7 @@
                             ? 'scale-95 bg-gray-700'
                             : 'bg-gray-800'
                     "
-                    class="hover:bg-gray-700 text-gray-100 font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
                 >
                     .
                 </button>
@@ -207,7 +207,7 @@
                         'scale-95 bg-emerald-700':
                             pressedKey === 'Enter' || pressedKey === '=',
                     }"
-                    class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-4 rounded-xl transition duration-150 active:scale-95"
+                    class="rounded-xl bg-emerald-600 p-4 font-bold text-white transition duration-150 hover:bg-emerald-700 active:scale-95"
                 >
                     =
                 </button>
@@ -216,26 +216,26 @@
 
         <!-- History Panel -->
         <div
-            class="w-80 sm:w-56 bg-gray-900 border border-gray-700/50 p-4 rounded-2xl shadow-2xl text-gray-100 flex flex-col h-[416px]"
+            class="flex h-[416px] w-80 flex-col rounded-2xl border border-gray-700/50 bg-gray-900 p-4 text-gray-100 shadow-2xl sm:w-56"
         >
             <div
-                class="text-sm font-semibold text-gray-400 mb-3 border-b border-gray-800 pb-2 flex justify-between items-center"
+                class="mb-3 flex items-center justify-between border-b border-gray-800 pb-2 text-sm font-semibold text-gray-400"
             >
                 <span>History</span>
                 <button
                     v-if="history.length > 0"
                     @click="clearHistory"
-                    class="text-xs cursor-pointer text-red-400 hover:text-red-300"
+                    class="cursor-pointer text-xs text-red-400 hover:text-red-300"
                 >
                     Clear
                 </button>
             </div>
             <div
-                class="flex-1 overflow-y-auto space-y-2 flex flex-col scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-transparent pr-1"
+                class="flex flex-1 scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-transparent flex-col space-y-2 overflow-y-auto pr-1"
             >
                 <div
                     v-if="history.length === 0"
-                    class="text-gray-600 text-sm text-center my-auto"
+                    class="my-auto text-center text-sm text-gray-600"
                 >
                     No history yet
                 </div>
@@ -243,7 +243,7 @@
                     v-for="(item, index) in history"
                     :key="index"
                     @click="loadHistoryItem(item)"
-                    class="bg-black/30 p-2.5 rounded-xl text-right border border-gray-800 hover:border-amber-500/50 hover:bg-black/50 cursor-pointer transition duration-150"
+                    class="cursor-pointer rounded-xl border border-gray-800 bg-black/30 p-2.5 text-right transition duration-150 hover:border-amber-500/50 hover:bg-black/50"
                 >
                     <div class="text-xs text-gray-400">
                         {{ item.expression }}
@@ -258,7 +258,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from 'vue';
 
 const props = defineProps<{
     initialA?: number | string | null;
@@ -269,10 +269,10 @@ const props = defineProps<{
 }>();
 
 const formatNumber = (num: number | string): string => {
-    const n = typeof num === "string" ? parseFloat(num) : num;
-    if (isNaN(n)) return "Error";
+    const n = typeof num === 'string' ? parseFloat(num) : num;
+    if (isNaN(n)) return 'Error';
 
-    if (n === 0) return "0";
+    if (n === 0) return '0';
 
     const absVal = Math.abs(n);
 
@@ -289,7 +289,7 @@ const currentInput = ref<string>(
         ? props.initialResult.toString()
         : props.initialA !== null && props.initialA !== undefined
           ? props.initialA.toString()
-          : "",
+          : '',
 );
 
 const previousInput = ref<null | string>(
@@ -309,7 +309,7 @@ const operation = ref<null | string>(
 const finishedOperation = ref<string>(
     props.initialA !== null && props.initialB !== null && props.initialOperation
         ? `${props.initialA} ${props.initialOperation} ${props.initialB} =`
-        : "",
+        : '',
 );
 
 const resetScreen = ref<boolean>(
@@ -326,9 +326,9 @@ if (
     const expr = `${props.initialA} ${props.initialOperation} ${props.initialB}`;
     history.value.unshift({
         expression: expr,
-        result: props.initialResult?.toString() || "0",
+        result: props.initialResult?.toString() || '0',
         state: {
-            currentInput: props.initialResult?.toString() || "",
+            currentInput: props.initialResult?.toString() || '',
             previousInput: null,
             operation: null,
             finishedOperation: `${expr} =`,
@@ -346,39 +346,39 @@ const previousOperation = computed(() => {
             ? `${previousInput.value} ${operation.value} ${currentInput.value}`
             : `${previousInput.value} ${operation.value}`;
     }
-    return "";
+    return '';
 });
 
 const appendNumber = (number: string) => {
     if (finishedOperation.value) {
-        finishedOperation.value = "";
+        finishedOperation.value = '';
         previousInput.value = null;
         operation.value = null;
     }
-    if (currentInput.value === "0" || resetScreen.value) {
-        currentInput.value = "";
+    if (currentInput.value === '0' || resetScreen.value) {
+        currentInput.value = '';
         resetScreen.value = false;
     }
-    if (number === "." && currentInput.value === "") {
-        currentInput.value = "0";
+    if (number === '.' && currentInput.value === '') {
+        currentInput.value = '0';
     }
-    if (number === "." && currentInput.value === "-") {
-        currentInput.value = "-0";
+    if (number === '.' && currentInput.value === '-') {
+        currentInput.value = '-0';
     }
-    if (number === "." && currentInput.value.includes(".")) return;
+    if (number === '.' && currentInput.value.includes('.')) return;
     if (currentInput.value.length >= 15) return;
-    if (currentInput.value.includes(".") && number !== ".") {
-        const decimalPart = currentInput.value.split(".")[1] || "";
+    if (currentInput.value.includes('.') && number !== '.') {
+        const decimalPart = currentInput.value.split('.')[1] || '';
         if (decimalPart.length >= 10) return;
     }
     currentInput.value += number;
 };
 
 const clear = () => {
-    currentInput.value = "";
+    currentInput.value = '';
     previousInput.value = null;
     operation.value = null;
-    finishedOperation.value = "";
+    finishedOperation.value = '';
     resetScreen.value = false;
 };
 
@@ -393,18 +393,18 @@ const deleteNumber = () => {
 
 const chooseOperation = (op: string) => {
     if (finishedOperation.value) {
-        finishedOperation.value = "";
+        finishedOperation.value = '';
     }
 
-    if (currentInput.value === "" && previousInput.value === null) {
-        if (op === "-") {
-            currentInput.value = "-";
+    if (currentInput.value === '' && previousInput.value === null) {
+        if (op === '-') {
+            currentInput.value = '-';
             return;
         }
         return;
     }
 
-    if (currentInput.value === "" && previousInput.value !== null) {
+    if (currentInput.value === '' && previousInput.value !== null) {
         operation.value = op;
         return;
     }
@@ -412,16 +412,16 @@ const chooseOperation = (op: string) => {
     if (
         previousInput.value !== null &&
         operation.value !== null &&
-        currentInput.value !== "" &&
-        currentInput.value !== "-"
+        currentInput.value !== '' &&
+        currentInput.value !== '-'
     ) {
         computeIntermediate();
-    } else if (currentInput.value !== "" && currentInput.value !== "-") {
+    } else if (currentInput.value !== '' && currentInput.value !== '-') {
         previousInput.value = currentInput.value;
     }
 
     operation.value = op;
-    currentInput.value = "";
+    currentInput.value = '';
     resetScreen.value = false;
 };
 
@@ -432,28 +432,28 @@ const computeIntermediate = () => {
 
     let comp: any;
     switch (operation.value) {
-        case "+":
+        case '+':
             comp = prev + current;
             break;
-        case "-":
+        case '-':
             comp = prev - current;
             break;
-        case "*":
+        case '*':
             comp = prev * current;
             break;
-        case "/":
-            comp = current === 0 ? "Error" : prev / current;
+        case '/':
+            comp = current === 0 ? 'Error' : prev / current;
             break;
     }
-    previousInput.value = comp === "Error" ? "Error" : formatNumber(comp);
-    currentInput.value = "";
+    previousInput.value = comp === 'Error' ? 'Error' : formatNumber(comp);
+    currentInput.value = '';
 };
 
 const compute = () => {
     if (
         previousInput.value === null ||
         operation.value === null ||
-        currentInput.value === ""
+        currentInput.value === ''
     )
         return;
 
@@ -466,24 +466,24 @@ const compute = () => {
     const currentOpSymbol = operation.value;
 
     switch (currentOpSymbol) {
-        case "+":
+        case '+':
             computation = prev + current;
             break;
-        case "-":
+        case '-':
             computation = prev - current;
             break;
-        case "*":
+        case '*':
             computation = prev * current;
             break;
-        case "/":
-            computation = current === 0 ? "Error" : prev / current;
+        case '/':
+            computation = current === 0 ? 'Error' : prev / current;
             break;
         default:
             return;
     }
 
     const formattedResult =
-        computation === "Error" ? "Error" : formatNumber(computation);
+        computation === 'Error' ? 'Error' : formatNumber(computation);
     const expressionStr = `${prev} ${currentOpSymbol} ${current}`;
     finishedOperation.value = `${expressionStr} =`;
 
@@ -521,16 +521,16 @@ const loadHistoryItem = (item: any) => {
 const handleKeyDown = (e: KeyboardEvent) => {
     pressedKey.value = e.key;
 
-    if ((e.key >= "0" && e.key <= "9") || e.key === ".") {
+    if ((e.key >= '0' && e.key <= '9') || e.key === '.') {
         appendNumber(e.key);
-    } else if (["+", "-", "*", "/"].includes(e.key)) {
+    } else if (['+', '-', '*', '/'].includes(e.key)) {
         chooseOperation(e.key);
-    } else if (e.key === "Enter" || e.key === "=") {
+    } else if (e.key === 'Enter' || e.key === '=') {
         e.preventDefault();
         compute();
-    } else if (e.key === "Backspace" || e.key === "Delete") {
+    } else if (e.key === 'Backspace' || e.key === 'Delete') {
         deleteNumber();
-    } else if (e.key === "Escape" || e.key.toLowerCase() === "c") {
+    } else if (e.key === 'Escape' || e.key.toLowerCase() === 'c') {
         clear();
     }
 };
@@ -540,12 +540,12 @@ const handleKeyUp = () => {
 };
 
 onMounted(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("keyup", handleKeyUp);
+    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keyup', handleKeyUp);
 });
 
 onUnmounted(() => {
-    window.removeEventListener("keydown", handleKeyDown);
-    window.removeEventListener("keyup", handleKeyUp);
+    window.removeEventListener('keydown', handleKeyDown);
+    window.removeEventListener('keyup', handleKeyUp);
 });
 </script>
