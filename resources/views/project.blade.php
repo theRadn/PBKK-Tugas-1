@@ -9,15 +9,15 @@
         /* Custom Background Effects */
         .bg-grid-pattern {
             background-size: 40px 40px;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
-        
+
         .text-glow {
             text-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
         }
-        
+
         .box-glow {
             box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
         }
@@ -34,10 +34,10 @@
     <!-- ==================== SHARED SITE NAVBAR ==================== -->
     <nav class="bg-gray-900 border-b border-gray-800 h-14 sticky top-0 z-50 shadow-lg">
         <div class="max-w-4xl mx-auto h-full flex justify-center items-center gap-6 text-sm font-semibold">
-            <a href="/" class="text-gray-400 hover:text-gray-200 transition">Beranda</a>
-            <a href="/about" class="text-gray-400 hover:text-gray-200 transition">Profil Jurusan</a>
-            <a href="/project-idea" class="text-emerald-400 hover:text-emerald-300 transition">Rencana Project</a>
-            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Kalkulator</a>
+            <a href="/" class="text-gray-400 hover:text-gray-200 transition">Landing Page</a>
+            <a href="/about" class="text-gray-400 hover:text-gray-200 transition">Department Profile</a>
+            <a href="/project-idea" class="text-emerald-400 hover:text-emerald-300 transition">Project Plan</a>
+            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Calculator</a>
         </div>
     </nav>
 
@@ -72,22 +72,22 @@
     <header class="relative min-h-screen flex flex-col items-center justify-center bg-grid-pattern pt-20 pb-32">
         <!-- Ambient Glow Background -->
         <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
-        
+
         <div class="z-10 text-center max-w-6xl px-6 w-full flex flex-col items-center">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-                MAGENTIC 
+                MAGENTIC
             </h1>
             <p class="text-xl md:text-2xl text-gray-400 font-light mb-12 tracking-wide">
                 The Next Generation of Web-Based Development.
             </p>
-            
+
             <h2 class="text-3xl md:text-5xl font-bold text-emerald-400 mb-8 text-glow">
                 MAJESTIC IN EVERY LINE.
             </h2>
             <p class="text-lg md:text-xl text-gray-300 max-w-3xl mb-12 leading-relaxed">
                 A collaborative web-based development environment powered by Agentic AI seamlessly integrated with GitHub.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row gap-6 justify-center mb-20">
                 <a href="#features" class="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-gray-950 rounded-full font-bold text-lg transition duration-300 shadow-[0_0_30px_rgba(16,185,129,0.4)]">
                     Explore the Project
@@ -112,7 +112,7 @@
                         <span class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-emerald-400"></div> Agent</span>
                     </div>
                 </div>
- 
+
                 <!-- Main Workspace (Editor + Chat Panel side by side) -->
                 <div class="flex flex-col lg:flex-row flex-1">
                     <!-- Code Body -->
@@ -248,7 +248,7 @@
     <section class="py-24 px-6 bg-gray-900 border-t border-gray-800 relative overflow-hidden">
         <div class="max-w-5xl mx-auto text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">One Workspace for Every Workflow.</h2>
-            
+
             <!-- Conceptual Diagram (Styled HTML/CSS instead of raw ASCII) -->
             <div class="bg-gray-950 p-10 rounded-3xl border border-gray-700 mb-12 shadow-2xl overflow-hidden">
                 <canvas id="workspaceCanvas" class="w-full h-[420px]"></canvas>
@@ -306,7 +306,7 @@
             const sideW = 150;
             const verticalW = 160;
             const nodeH = 40;
- 
+
             const gap = 80;
 
             const centerNode = {x: centerX, y: centerY, w: centerW};
@@ -357,7 +357,7 @@
             <h2 class="text-4xl md:text-5xl font-bold mb-20 text-center text-white">Key Features</h2>
 
             <div class="grid md:grid-cols-2 gap-8">
-                
+
                 <!-- Feature 1: Agentic AI -->
                 <article class="p-10 bg-gray-900 rounded-3xl border border-gray-800 flex flex-col justify-between hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(16,185,129,0.15)] hover:border-emerald-500/50 transition duration-500">
                     <div>
@@ -427,12 +427,12 @@
             <p class="text-xl text-gray-400 text-center mb-16 max-w-3xl mx-auto">
                 Unlike any other standard chat models, our Agentic AI executes a systematic loop, analyzes, forms a plan, executes changes, and verifies the result.
             </p>
-            
+
             <!-- Agent Visual Demo -->
             <!-- please insert image here: Optional animated GIF of the agent working -->
             <div class="bg-gray-950 rounded-3xl border border-gray-700 p-8 md:p-12 box-glow">
                 <div class="font-mono text-base max-w-3xl mx-auto">
-                    
+
                     <!-- User Prompt -->
                     <div class="mb-12">
                         <div class="text-gray-500 mb-2 font-bold tracking-wider text-sm">YOU</div>
@@ -440,7 +440,7 @@
                             "Fix the authentication bug on login."
                         </div>
                     </div>
-                    
+
                     <!-- Agent Process -->
                     <div class="mb-12 pl-12 border-l-2 border-emerald-900/50 relative">
                         <div class="absolute -left-[17px] top-0 w-8 h-8 bg-gray-950 border-2 border-emerald-500 rounded-full flex items-center justify-center text-emerald-500">↓</div>
@@ -473,11 +473,11 @@
             <p class="text-xl text-gray-400 mb-16 text-center max-w-3xl">
                 Just like Google Docs, developers can work on the same project simultaneously together an AI agent to assists along the way.
             </p>
-            
+
             <!-- Collaborative Code Editor Mockup -->
             <!-- please insert image here: Visual showing multiple cursors with names like "Arda" and "Aji" editing the same code -->
             <div class="w-full bg-[#1e1e1e] rounded-xl border border-gray-700 shadow-2xl overflow-hidden font-mono text-sm sm:text-base leading-loose relative flex flex-col">
-                
+
                 <!-- Mac style header -->
                 <div class="bg-[#2d2d2d] px-4 py-3 flex justify-between items-center border-b border-gray-700 shrink-0">
                     <div class="flex gap-2">
@@ -498,7 +498,7 @@
                         </span>
                     </div>
                 </div>
-                
+
                 <!-- Main Workspace (Editor + Chat Panel side by side) -->
                 <div class="flex flex-col lg:flex-row flex-1">
 
@@ -533,7 +533,7 @@
                         <div class="pl-8"><span class="text-pink-400">return</span> <span class="text-yellow-200">back</span>()-><span class="text-yellow-200">withErrors</span>([<span class="text-green-300">'email'</span> => <span class="text-green-300">'Invalid login.'</span>]);</div>
                         <div>}</div>
                     </div>
-                    
+
                     <!-- VS Code AI Chat Panel (Right Side) -->
                     <div class="w-full lg:w-80 lg:flex-none border-t lg:border-t-0 lg:border-l border-gray-700 bg-[#1e1e1e] flex flex-col text-xs font-sans shrink-0">
 
@@ -617,27 +617,27 @@
             <article>
                 <h2 class="text-3xl font-bold mb-10 text-white center">Built With</h2>
                 <div class="space-y-4">
-                    
+
                     <div class="p-6 bg-gray-950 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-gray-600 transition">
                         <div class="w-32 font-bold text-gray-500 uppercase tracking-widest text-xs">Frontend</div>
                         <div class="text-white font-medium text-lg">Monaco Editor, JS, Tailwind CSS</div>
                     </div>
-                    
+
                     <div class="p-6 bg-gray-950 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-gray-600 transition">
                         <div class="w-32 font-bold text-gray-500 uppercase tracking-widest text-xs">Backend</div>
                         <div class="text-white font-medium text-lg">Laravel 11+ / PHP 8.4 / MySQL</div>
                     </div>
-                    
+
                     <div class="p-6 bg-gray-950 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-gray-600 transition">
                         <div class="w-32 font-bold text-gray-500 uppercase tracking-widest text-xs">AI Core</div>
                         <div class="text-white font-medium text-lg">Custom Agent Framework + LLM API</div>
                     </div>
-                    
+
                     <div class="p-6 bg-gray-950 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-gray-600 transition">
                         <div class="w-32 font-bold text-gray-500 uppercase tracking-widest text-xs">Integration</div>
                         <div class="text-white font-medium text-lg">GitHub REST & GraphQL API</div>
                     </div>
-                    
+
                     <div class="p-6 bg-gray-950 rounded-2xl border border-gray-800 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-gray-600 transition">
                         <div class="w-32 font-bold text-gray-500 uppercase tracking-widest text-xs">Realtime</div>
                         <div class="text-white font-medium text-lg">WebSockets / Laravel Reverb</div>

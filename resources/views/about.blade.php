@@ -67,7 +67,7 @@ $members = [
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Jurusan - ITS Academic Profile</title>
+    <title>Department Profile - ITS Academic Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-grid-pattern {

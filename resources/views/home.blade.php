@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - ITS Academic Profile</title>
+    <title>Landing Page - ITS Academic Profile</title>
     <!-- Menggunakan CDN Tailwind agar kamu bisa melihat desainnya tanpa perlu Node.js -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -11,12 +11,13 @@
 
     <nav class="bg-gray-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-lg">
         <div class="max-w-4xl mx-auto flex justify-center gap-6 text-sm font-semibold">
-            <a href="/" class="text-emerald-400 hover:text-emerald-300 transition">Beranda</a>
-            <a href="/about" class="text-gray-400 hover:text-gray-200 transition">Profil Jurusan</a>
-            <a href="/project-idea" class="text-gray-400 hover:text-gray-200 transition">Rencana Project</a>
-            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Kalkulator</a>
+            <a href="/" class="text-emerald-400 hover:text-emerald-300 transition">Landing Page</a>
+            <a href="/about" class="text-gray-400 hover:text-gray-200 transition">Department Profile</a>
+            <a href="/project-idea" class="text-gray-400 hover:text-gray-200 transition">Project Plan</a>
+            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Calculator</a>
         </div>
     </nav>
+
 
     <main class="flex-grow flex items-center justify-center py-12 px-6">
         <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -35,9 +36,7 @@
                 </div>
 
                 <div class="p-4 rounded-xl border border-gray-800/60">
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Ini adalah halaman beranda dari Sistem Informasi Statik Profil Mahasiswa ITS.
-                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">This is the homepage of the ITS Student Profile Static Information System.</p>
                 </div>
             </div>
 
