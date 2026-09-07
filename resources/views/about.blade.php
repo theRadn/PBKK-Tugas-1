@@ -105,13 +105,13 @@ $members = [
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-300 font-sans antialiased selection:bg-amber-500 selection:text-gray-950 overflow-x-hidden">
+<body class="bg-gray-950 text-gray-300 font-sans antialiased selection:bg-emerald-500 selection:text-gray-950 overflow-x-hidden">
 
     <!-- ==================== NAVBAR ==================== -->
     <nav class="bg-gray-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-lg">
         <div class="max-w-4xl mx-auto flex justify-center gap-6 text-sm font-semibold">
             <a href="/" class="text-gray-400 hover:text-gray-200 transition">Landing Page</a>
-            <a href="/about" class="text-amber-400 hover:text-amber-300 transition">Department Profile</a>
+            <a href="/about" class="text-emerald-400 hover:text-emerald-300 transition">Department Profile</a>
             <a href="/project-idea" class="text-gray-400 hover:text-gray-200 transition">Project Plan</a>
             <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Calculator</a>
         </div>
@@ -119,10 +119,10 @@ $members = [
 
     <!-- ==================== HERO ==================== -->
     <header class="relative min-h-screen flex flex-col items-center justify-center bg-grid-pattern pt-20 pb-28">
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-500/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
 
         <div class="z-10 text-center max-w-5xl px-6 flex flex-col items-center">
-            <div class="text-amber-400 font-black tracking-widest text-sm uppercase mb-6 flex items-center gap-2">
+            <div class="text-emerald-400 font-black tracking-widest text-sm uppercase mb-6 flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253m0-13V21m0-15.747V4"></path></svg>
                 ITS Academic Profile
             </div>
@@ -131,7 +131,7 @@ $members = [
                 Informatics Engineering Department ITS
             </h1>
 
-            <h2 class="text-2xl md:text-4xl font-bold text-amber-400 mb-6 text-glow">
+            <h2 class="text-2xl md:text-4xl font-bold text-emerald-400 mb-6 text-glow">
                 CETAK GENERASI TEKNOLOGI MASA DEPAN!
             </h2>
 
@@ -140,7 +140,7 @@ $members = [
             </p>
 
             <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
-                <a href="#profil" class="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-gray-950 rounded-full font-bold text-lg transition duration-300 shadow-[0_0_30px_rgba(245,158,11,0.4)]">
+                <a href="#profil" class="px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-gray-950 rounded-full font-bold text-lg transition duration-300 shadow-[0_0_30px_rgba(245,158,11,0.4)]">
                     Department Profile
                 </a>
                 <a href="#tim" class="px-8 py-4 bg-transparent hover:bg-gray-900 text-white rounded-full font-bold text-lg transition duration-300 border border-gray-700">
@@ -154,7 +154,7 @@ $members = [
     <section id="profil" class="min-h-screen py-28 px-6 bg-gray-950 border-t border-gray-800">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <div class="text-amber-400 font-black tracking-widest text-xs uppercase mb-4">About The Department</div>
+                <div class="text-emerald-400 font-black tracking-widest text-xs uppercase mb-4">About The Department</div>
                 <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
                     Department Profile
                 </h2>
@@ -163,18 +163,18 @@ $members = [
             <div class="grid lg:grid-cols-5 gap-12 items-start">
                 <div class="lg:col-span-3 space-y-8">
                     <p class="text-gray-300 leading-relaxed text-lg">
-                       The Department of Informatics Engineering (TC) at Institut Teknologi Sepuluh Nopember (ITS) focuses on education, research, 
-                        and innovation in the fields of computing, software engineering, and artificial intelligence. The department is committed to developing 
+                       The Department of Informatics Engineering (TC) at Institut Teknologi Sepuluh Nopember (ITS) focuses on education, research,
+                        and innovation in the fields of computing, software engineering, and artificial intelligence. The department is committed to developing
                         highly capable graduates equipped with strong theoretical foundations, practical skills, and the ability to address complex technological challenges.
                     </p>
                     <p class="text-gray-400 leading-relaxed">
-                        Through a combination of academic learning, research activities, and industry-oriented projects, the department provides students with opportunities to explore areas 
-                        such as software development, data science, intelligent systems, computer networks, and computational methods. By fostering collaboration between students, lecturers, 
+                        Through a combination of academic learning, research activities, and industry-oriented projects, the department provides students with opportunities to explore areas
+                        such as software development, data science, intelligent systems, computer networks, and computational methods. By fostering collaboration between students, lecturers,
                         researchers, and industry partners, the department strives to contribute to technological advancement both nationally and internationally.
                     </p>
 
-                    <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800 border-l-4 border-l-amber-500 shadow-inner mt-4">
-                        <div class="flex items-center gap-2 text-amber-400 font-bold tracking-wider text-sm uppercase mb-3">
+                    <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800 border-l-4 border-l-emerald-500 shadow-inner mt-4">
+                        <div class="flex items-center gap-2 text-emerald-400 font-bold tracking-wider text-sm uppercase mb-3">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             Visi
                         </div>
@@ -186,19 +186,19 @@ $members = [
 
                 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
-                        <div class="text-4xl font-black text-amber-400 mb-2">1985</div>
+                        <div class="text-4xl font-black text-emerald-400 mb-2">1985</div>
                         <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Established</div>
                     </div>
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
-                        <div class="text-4xl font-black text-amber-400 mb-2">5+</div>
+                        <div class="text-4xl font-black text-emerald-400 mb-2">5+</div>
                         <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Study program</div>
                     </div>
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
-                        <div class="text-4xl font-black text-amber-400 mb-2">10+</div>
+                        <div class="text-4xl font-black text-emerald-400 mb-2">10+</div>
                         <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Research Group</div>
                     </div>
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
-                        <div class="text-4xl font-black text-amber-400 mb-2">50+</div>
+                        <div class="text-4xl font-black text-emerald-400 mb-2">50+</div>
                         <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Lecturer</div>
                     </div>
                 </div>
@@ -210,7 +210,7 @@ $members = [
     <section id="tim" class="py-28 px-6 bg-gray-950 border-t border-gray-800">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <div class="text-amber-400 font-black tracking-widest text-xs uppercase mb-4">Our Team</div>
+                <div class="text-emerald-400 font-black tracking-widest text-xs uppercase mb-4">Our Team</div>
                 <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
                     Team Member
                 </h2>
