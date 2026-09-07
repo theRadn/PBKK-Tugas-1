@@ -5,60 +5,60 @@ $members = [
         'name' => 'Raden Kurniawan Agung Fitrianto',
         'nim' => '5025241104',
         'major' => 'Teknik Informatika',
-        'summary' => 'Lorem ipsum project manager',
-        'detail' => 'Full bio goes here. Talk about the role in the project, skills, contributions, contact info, or anything else that does not fit in the short card summary. This text only shows once the card is clicked.',
-        'email' => '@example.com',
-        'github' => 'https://github.com/example',
+        'summary' => 'All Role',
+        'detail' => 'Normal informatics engineering student at  Sepuluh Nopember Institute of Technology.',
+        'email' => 'rkurniawanagung32@gmail.com',
+        'github' => 'https://github.com/theRadn',
     ],
     [
         'initials' => 'AB',
         'name' => 'Abdullah Sultan Barizy',
         'nim' => '5025241092',
-        'major' => 'Teknik Informatika',
-        'summary' => 'Lorem ipsum auditor.',
-        'detail' => 'Detailed background about , his responsibilities on the team, and any extra notes worth showing in the popup.',
-        'email' => '@example.com',
-        'github' => 'https://github.com/example',
+        'major' => 'Informatics Engineering',
+        'summary' => 'The Project Manager',
+        'detail' => 'The (future) Head of Student Social Development department in HMTC and do stuff in PKT Lab',
+        'email' => 'abdullahsultanbarizy@gmail.com',
+        'github' => 'https://github.com/lamphyon',
     ],
     [
         'initials' => 'WN',
         'name' => 'Willy Dava Nugraha',
         'nim' => '5025241090',
         'major' => 'Teknik Informatika',
-        'summary' => 'Lorem ipsum junior.',
-        'detail' => 'Extended information about , including project role and additional context for the modal view.',
-        'email' => '@example.com',
-        'github' => 'https://github.com/example',
+        'summary' => 'Junior Software Developer',
+        'detail' => 'Assisting in designing, coding, testing, and maintaining software applications.',
+        'email' =>  'wdnugraha24@gmail.com',
+        'github' => 'https://github.com/terainfinits',
     ],
     [
         'initials' => 'AZ',
         'name' => 'Addien Zafriyan Al Akhsan',
         'nim' => '5025241058',
         'major' => 'Teknik Informatika',
-        'summary' => 'Lorem ipsum junior.',
-        'detail' => 'Extended information about , including project role and additional context for the modal view.',
-        'email' => 'addien.zafriyan@gmail.com',
-        'github' => 'https://github.com/example',
+        'summary' => 'Dynamic Assistant',
+        'detail' => 'ITS Global Engagement Volunteer and a Normal Human',
+        'email' => 'addien.zafriyan@example.com',
+        'github' => 'https://github.com/RevEnterprise',
     ],
     [
-        'initials' => 'NP',
+        'initials' => 'AJ',
         'name' => 'Aji Zaenul Musthofa',
         'nim' => '5025241065',
         'major' => 'Teknik Informatika',
-        'summary' => 'Lorem ipsum junior.',
-        'detail' => 'Extended information about , including project role and additional context for the modal view.',
-        'email' => '@example.com',
-        'github' => 'https://github.com/example',
+        'summary' => 'Informatics Engineering Student',
+        'detail' => 'Informatics Engineering student at Sepuluh Nopember Institute of Technology.',
+        'email' => 'ajizaenulm33@gmail.com',
+        'github' => 'https://github.com/ajizaenulm',
     ],
     [
-        'initials' => 'NP',
-        'name' => 'Anak Agung Putu Arda N',
-        'nim' => '5025241074',
-        'major' => 'Teknik Informatika',
-        'summary' => 'Lorem ipsum junior.',
-        'detail' => 'Extended information about , including project role and additional context for the modal view.',
-        'email' => '@example.com',
-        'github' => 'https://github.com/example',
+    'initials' => 'AR',
+    'name' => 'Anak Agung Putu Arda Nareswara',
+    'nim' => '5025241074',
+    'major' => 'Teknik Informatika',
+    'summary' => 'Frontend Developer',
+    'detail' => 'Developing and implementing responsive user interfaces to deliver a smooth and engaging web experience.',
+    'email' => 'agungarda81@gmail.com',
+    'github' => 'https://github.com/gungardaa',
     ],
 ];
 ?>
@@ -110,10 +110,10 @@ $members = [
     <!-- ==================== NAVBAR ==================== -->
     <nav class="bg-gray-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-lg">
         <div class="max-w-4xl mx-auto flex justify-center gap-6 text-sm font-semibold">
-            <a href="/" class="text-gray-400 hover:text-gray-200 transition">Beranda</a>
-            <a href="/about" class="text-amber-400 hover:text-amber-300 transition">Profil Jurusan</a>
-            <a href="/project-idea" class="text-gray-400 hover:text-gray-200 transition">Rencana Project</a>
-            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Kalkulator</a>
+            <a href="/" class="text-gray-400 hover:text-gray-200 transition">Landing Page</a>
+            <a href="/about" class="text-amber-400 hover:text-amber-300 transition">Department Profile</a>
+            <a href="/project-idea" class="text-gray-400 hover:text-gray-200 transition">Project Plan</a>
+            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Calculator</a>
         </div>
     </nav>
 
@@ -128,24 +128,23 @@ $members = [
             </div>
 
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
-                Departemen Teknik Informatika ITS
+                Informatics Engineering Department ITS
             </h1>
 
             <h2 class="text-2xl md:text-4xl font-bold text-amber-400 mb-6 text-glow">
-                CETAK GENERASI TEKNOLOGI MASA DEPAN.
+                CETAK GENERASI TEKNOLOGI MASA DEPAN!
             </h2>
 
             <p class="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed font-light">
-                Menyiapkan sumber daya manusia unggul di bidang komputasi, perangkat lunak,
-                dan kecerdasan buatan menuju standar internasional.
+                Developing outstanding human resources in the fields of computing, software, and artificial intelligence toward international standards.
             </p>
 
             <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="#profil" class="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-gray-950 rounded-full font-bold text-lg transition duration-300 shadow-[0_0_30px_rgba(245,158,11,0.4)]">
-                    Profil Jurusan
+                    Department Profile
                 </a>
                 <a href="#tim" class="px-8 py-4 bg-transparent hover:bg-gray-900 text-white rounded-full font-bold text-lg transition duration-300 border border-gray-700">
-                    Lihat Tim
+                    Our team
                 </a>
             </div>
         </div>
@@ -157,21 +156,21 @@ $members = [
             <div class="text-center mb-16">
                 <div class="text-amber-400 font-black tracking-widest text-xs uppercase mb-4">About The Department</div>
                 <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                    Profil Departemen
+                    Department Profile
                 </h2>
             </div>
 
             <div class="grid lg:grid-cols-5 gap-12 items-start">
                 <div class="lg:col-span-3 space-y-8">
                     <p class="text-gray-300 leading-relaxed text-lg">
-                        Departemen Teknik Informatika (TC) ITS berfokus pada pendidikan dan penelitian di bidang
-                        komputasi, perangkat lunak, dan kecerdasan buatan. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                       The Department of Informatics Engineering (TC) at Institut Teknologi Sepuluh Nopember (ITS) focuses on education, research, 
+                        and innovation in the fields of computing, software engineering, and artificial intelligence. The department is committed to developing 
+                        highly capable graduates equipped with strong theoretical foundations, practical skills, and the ability to address complex technological challenges.
                     </p>
                     <p class="text-gray-400 leading-relaxed">
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Through a combination of academic learning, research activities, and industry-oriented projects, the department provides students with opportunities to explore areas 
+                        such as software development, data science, intelligent systems, computer networks, and computational methods. By fostering collaboration between students, lecturers, 
+                        researchers, and industry partners, the department strives to contribute to technological advancement both nationally and internationally.
                     </p>
 
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800 border-l-4 border-l-amber-500 shadow-inner mt-4">
@@ -180,8 +179,7 @@ $members = [
                             Visi
                         </div>
                         <p class="italic text-gray-300 leading-relaxed">
-                            "Visi departemen adalah menjadi institusi rujukan pendidikan tinggi di bidang Teknik
-                            Informatika yang diakui secara internasional."
+                            The department’s vision is to become an internationally recognized leading institution for higher education in the field of Informatics Engineering.
                         </p>
                     </div>
                 </div>
@@ -189,23 +187,19 @@ $members = [
                 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
                         <div class="text-4xl font-black text-amber-400 mb-2">1985</div>
-                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Tahun Berdiri</div>
-                        <p class="text-xs text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Established</div>
                     </div>
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
                         <div class="text-4xl font-black text-amber-400 mb-2">5+</div>
-                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Program Studi</div>
-                        <p class="text-xs text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Study program</div>
                     </div>
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
                         <div class="text-4xl font-black text-amber-400 mb-2">10+</div>
-                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Grup Riset</div>
-                        <p class="text-xs text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Research Group</div>
                     </div>
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
                         <div class="text-4xl font-black text-amber-400 mb-2">50+</div>
-                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Dosen Ahli</div>
-                        <p class="text-xs text-gray-500 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider">Lecturer</div>
                     </div>
                 </div>
             </div>
@@ -218,7 +212,7 @@ $members = [
             <div class="text-center mb-16">
                 <div class="text-amber-400 font-black tracking-widest text-xs uppercase mb-4">Our Team</div>
                 <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
-                    Anggota Tim
+                    Team Member
                 </h2>
             </div>
 
