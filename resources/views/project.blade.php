@@ -251,32 +251,100 @@
             
             <!-- Conceptual Diagram (Styled HTML/CSS instead of raw ASCII) -->
             <div class="bg-gray-950 p-10 rounded-3xl border border-gray-700 mb-12 shadow-2xl overflow-hidden">
-
-                <div class="relative mx-auto w-full max-w-3xl h-[420px] flex items-center justify-center">
-
-                    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white border-2 border-emerald-500 bg-gray-900 px-10 py-5 rounded-xl shadow-[0_0_25px_rgba(16,185,129,0.25)]  font-mono text-base sm:text-lg font-semibold  whitespace-nowrap">
-                        Web-based IDE
-                    </div>
-
-                    <div class="absolute left-1/2 top-4 -translate-x-1/2  text-white border border-gray-700 bg-gray-800 px-8 py-3 rounded-xl  font-mono text-sm sm:text-base  whitespace-nowrap">
-                        GitHub
-                    </div>
-
-                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-emerald-400 border border-emerald-900 bg-emerald-900/20 px-6 py-3 rounded-xl font-mono text-sm sm:text-base whitespace-nowrap">
-                        Collaborator</div>
-
-                    <div class="absolute right-4 top-1/2 -translate-y-1/2 text-purple-400 border border-purple-900 bg-purple-900/20 px-6 py-3 rounded-xl font-mono text-sm sm:text-base whitespace-nowrap">
-                        Agentic AI
-                    </div>
-
-                    <div class="absolute left-1/2 bottom-4 -translate-x-1/2  text-red-400 border border-red-900 bg-red-900/20 px-8 py-3 rounded-xl font-mono text-sm sm:text-base whitespace-nowrap">
-                        Laravel Backend
-                    </div>
-
-                </div>
-
+                <canvas id="workspaceCanvas" class="w-full h-[420px]"></canvas>
             </div>
 
+           <script>
+            const cv = document.getElementById('workspaceCanvas');
+            const ctx = cv.getContext('2d');
+            const rect = cv.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+
+            cv.width = rect.width * dpr;
+            cv.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+
+            const W = rect.width;
+            const H = rect.height;
+            const centerX = W / 2;
+            const centerY = H / 2;
+
+            ctx.font = '14px monospace';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            const drawArrow = (x1, y1, x2, y2) => {
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.strokeStyle = '#8b949e';
+                ctx.lineWidth = 1.5;
+                ctx.stroke();
+
+                ctx.fillStyle = '#8b949e';
+
+                const angle = Math.atan2(y2 - y1, x2 - x1);
+
+                const head = (x, y, rotation) => {
+                    ctx.save();
+                    ctx.translate(x, y);
+                    ctx.rotate(rotation);
+                    ctx.beginPath();
+                    ctx.moveTo(0, 0);
+                    ctx.lineTo(-10, 4);
+                    ctx.lineTo(-10, -4);
+                    ctx.closePath();
+                    ctx.fill();
+                    ctx.restore();
+                };
+
+                head(x2, y2, angle);
+                head(x1, y1, angle + Math.PI);
+            };
+
+            const centerW = 200;
+            const sideW = 150;
+            const verticalW = 160;
+            const nodeH = 40;
+ 
+            const gap = 80;
+
+            const centerNode = {x: centerX, y: centerY, w: centerW};
+
+            const github = {x: centerX, y: centerY - nodeH / 2 - gap - nodeH / 2};
+            const backend = {x: centerX, y: centerY + nodeH / 2 + gap + nodeH / 2};
+            const collaborator = {x: centerX - centerW / 2 - gap - sideW / 2, y: centerY};
+            const ai = {x: centerX + centerW / 2 + gap + sideW / 2, y: centerY};
+
+            drawArrow(centerNode.x, github.y + nodeH / 2, centerNode.x, centerNode.y - nodeH / 2);
+            drawArrow(centerNode.x, centerNode.y + nodeH / 2, centerNode.x, backend.y - nodeH / 2);
+            drawArrow(collaborator.x + sideW / 2, collaborator.y, centerNode.x - centerW / 2, centerNode.y);
+            drawArrow(centerNode.x + centerW / 2, centerNode.y, ai.x - sideW / 2, ai.y);
+
+            [
+                [github.x, github.y, verticalW, 'GitHub', '#ffffff', '#374151', '#1f2937'],
+                [collaborator.x, collaborator.y, sideW, 'Collaborator', '#34d399', '#064e3b', '#06251d'],
+                [ai.x, ai.y, sideW, 'Agentic AI', '#c084fc', '#581c87', '#170d24'],
+                [backend.x, backend.y, verticalW, 'Laravel Backend', '#f87171', '#7f1d1d', '#250b0b'],
+                [centerNode.x, centerNode.y, centerW, 'Web-based IDE', '#ffffff', '#10b981', '#111827', '#10b981']
+            ].forEach(([x, y, w, text, tc, bc, bg, glow]) => {
+                ctx.shadowBlur = glow ? 15 : 0;
+                ctx.shadowColor = glow || 'transparent';
+
+                ctx.fillStyle = bg;
+                ctx.strokeStyle = bc;
+                ctx.lineWidth = glow ? 2 : 1.5;
+
+                ctx.beginPath();
+                ctx.roundRect(x - w / 2, y - nodeH / 2, w, nodeH, 6);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.shadowBlur = 0;
+                ctx.fillStyle = tc;
+                ctx.fillText(text, x, y);
+            });
+            </script>
             <p class="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
                 A browser-based development environment that combines code editing, GitHub integration, real-time collaboration, and autonomous AI agents into a single, cohesive workspace.
             </p>
