@@ -250,16 +250,31 @@
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">One Workspace for Every Workflow.</h2>
             
             <!-- Conceptual Diagram (Styled HTML/CSS instead of raw ASCII) -->
-            <div class="bg-gray-950 p-10 rounded-3xl border border-gray-700 mb-12 shadow-2xl font-mono text-sm sm:text-base text-gray-400 overflow-x-auto">
-                <pre class="inline-block text-left">
-                     <span class="text-white border border-gray-700 bg-gray-800 px-6 py-2 rounded-lg">    GitHub     </span>
-                             │
-                             ▼
-<span class="text-emerald-400 border border-emerald-900 bg-emerald-900/20 px-4 py-2 rounded-lg"> Collaborator </span>◄────►<span class="text-white border-2 border-emerald-500 bg-gray-900 px-8 py-3 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.3)]">  Web-based IDE  </span>◄────►<span class="text-purple-400 border border-purple-900 bg-purple-900/20 px-4 py-2 rounded-lg">  Agentic AI  </span>
-                             │
-                             ▼
-                     <span class="text-red-400 border border-red-900 bg-red-900/20 px-6 py-2 rounded-lg">Laravel Backend</span>
-                </pre>
+            <div class="bg-gray-950 p-10 rounded-3xl border border-gray-700 mb-12 shadow-2xl overflow-hidden">
+
+                <div class="relative mx-auto w-full max-w-3xl h-[420px] flex items-center justify-center">
+
+                    <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white border-2 border-emerald-500 bg-gray-900 px-10 py-5 rounded-xl shadow-[0_0_25px_rgba(16,185,129,0.25)]  font-mono text-base sm:text-lg font-semibold  whitespace-nowrap">
+                        Web-based IDE
+                    </div>
+
+                    <div class="absolute left-1/2 top-4 -translate-x-1/2  text-white border border-gray-700 bg-gray-800 px-8 py-3 rounded-xl  font-mono text-sm sm:text-base  whitespace-nowrap">
+                        GitHub
+                    </div>
+
+                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-emerald-400 border border-emerald-900 bg-emerald-900/20 px-6 py-3 rounded-xl font-mono text-sm sm:text-base whitespace-nowrap">
+                        Collaborator</div>
+
+                    <div class="absolute right-4 top-1/2 -translate-y-1/2 text-purple-400 border border-purple-900 bg-purple-900/20 px-6 py-3 rounded-xl font-mono text-sm sm:text-base whitespace-nowrap">
+                        Agentic AI
+                    </div>
+
+                    <div class="absolute left-1/2 bottom-4 -translate-x-1/2  text-red-400 border border-red-900 bg-red-900/20 px-8 py-3 rounded-xl font-mono text-sm sm:text-base whitespace-nowrap">
+                        Laravel Backend
+                    </div>
+
+                </div>
+
             </div>
 
             <p class="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
@@ -521,14 +536,8 @@
                         </div>
 
                     </div>
-                    <!-- END AI CHAT PANEL -->
-
                 </div>
-                <!-- END MAIN WORKSPACE -->
-
             </div>
-            <!-- END CODE EDITOR MOCKUP -->
-
         </div>
     </section>
 
