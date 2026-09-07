@@ -1,10 +1,10 @@
 <template>
     <nav class="bg-gray-900 border-b border-gray-800 p-4 sticky top-0 z-50 shadow-lg">
         <div class="max-w-4xl mx-auto flex justify-center gap-6 text-sm font-semibold">
-            <a href="/" class="text-emerald-400 hover:text-emerald-300 transition">Beranda</a>
+            <a href="/" class="text-gray-400 hover:text-gray-200 transition">Beranda</a>
             <a href="/about" class="text-gray-400 hover:text-gray-200 transition">Profil Jurusan</a>
             <a href="/project-idea" class="text-gray-400 hover:text-gray-200 transition">Rencana Project</a>
-            <a href="/hitung" class="text-gray-400 hover:text-gray-200 transition">Kalkulator</a>
+            <a href="/hitung" class="text-emerald-400 hover:text-emerald-300 transition">Kalkulator</a>
         </div>
     </nav>
     <div
