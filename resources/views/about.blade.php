@@ -1,3 +1,67 @@
+<?php
+$members = [
+    [
+        'initials' => 'RF',
+        'name' => 'Raden Kurniawan Agung Fitrianto',
+        'nim' => '5025241104',
+        'major' => 'Teknik Informatika',
+        'summary' => 'Lorem ipsum project manager',
+        'detail' => 'Full bio goes here. Talk about the role in the project, skills, contributions, contact info, or anything else that does not fit in the short card summary. This text only shows once the card is clicked.',
+        'email' => '@example.com',
+        'github' => 'https://github.com/example',
+    ],
+    [
+        'initials' => 'AB',
+        'name' => 'Abdullah Sultan Barizy',
+        'nim' => '5025241092',
+        'major' => 'Teknik Informatika',
+        'summary' => 'Lorem ipsum auditor.',
+        'detail' => 'Detailed background about , his responsibilities on the team, and any extra notes worth showing in the popup.',
+        'email' => '@example.com',
+        'github' => 'https://github.com/example',
+    ],
+    [
+        'initials' => 'WN',
+        'name' => 'Willy Dava Nugraha',
+        'nim' => '5025241090',
+        'major' => 'Teknik Informatika',
+        'summary' => 'Lorem ipsum junior.',
+        'detail' => 'Extended information about , including project role and additional context for the modal view.',
+        'email' => '@example.com',
+        'github' => 'https://github.com/example',
+    ],
+    [
+        'initials' => 'NP',
+        'name' => 'Lorem',
+        'nim' => '5025241xxx',
+        'major' => 'Teknik Informatika',
+        'summary' => 'Lorem ipsum junior.',
+        'detail' => 'Extended information about , including project role and additional context for the modal view.',
+        'email' => '@example.com',
+        'github' => 'https://github.com/example',
+    ],
+    [
+        'initials' => 'NP',
+        'name' => 'Lorem',
+        'nim' => '5025241xxx',
+        'major' => 'Teknik Informatika',
+        'summary' => 'Lorem ipsum junior.',
+        'detail' => 'Extended information about , including project role and additional context for the modal view.',
+        'email' => '@example.com',
+        'github' => 'https://github.com/example',
+    ],
+    [
+        'initials' => 'NP',
+        'name' => 'Lorem',
+        'nim' => '5025241xxx',
+        'major' => 'Teknik Informatika',
+        'summary' => 'Lorem ipsum junior.',
+        'detail' => 'Extended information about , including project role and additional context for the modal view.',
+        'email' => '@example.com',
+        'github' => 'https://github.com/example',
+    ],
+];
+?>
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
@@ -21,6 +85,24 @@
         ::-webkit-scrollbar-track { background: #030712; }
         ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #374151; }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        dialog {
+            background: transparent;
+            border: none;
+            padding: 0;
+            max-width: 32rem;
+            width: 90vw;
+        }
+        dialog[open] {
+            animation: pop 0.25s ease-out;
+        }
+        @keyframes pop {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
     </style>
 </head>
 <body class="bg-gray-950 text-gray-300 font-sans antialiased selection:bg-amber-500 selection:text-gray-950 overflow-x-hidden">
@@ -37,7 +119,6 @@
 
     <!-- ==================== HERO ==================== -->
     <header class="relative min-h-screen flex flex-col items-center justify-center bg-grid-pattern pt-20 pb-28">
-        <!-- Ambient Glow -->
         <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-amber-500/10 blur-[150px] rounded-full pointer-events-none z-0"></div>
 
         <div class="z-10 text-center max-w-5xl px-6 flex flex-col items-center">
@@ -81,7 +162,6 @@
             </div>
 
             <div class="grid lg:grid-cols-5 gap-12 items-start">
-                <!-- Left: description + vision -->
                 <div class="lg:col-span-3 space-y-8">
                     <p class="text-gray-300 leading-relaxed text-lg">
                         Departemen Teknik Informatika (TC) ITS berfokus pada pendidikan dan penelitian di bidang
@@ -106,7 +186,6 @@
                     </div>
                 </div>
 
-                <!-- Right: key facts -->
                 <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
                     <div class="p-6 bg-gray-900 rounded-2xl border border-gray-800">
                         <div class="text-4xl font-black text-amber-400 mb-2">1985</div>
@@ -133,93 +212,96 @@
         </div>
     </section>
 
-    <!-- ==================== TIM / TEAM SECTION ==================== -->
-    <section id="tim" class="py-28 px-6 bg-gray-900 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto">
+    <!-- ==================== TIM ==================== -->
+    <section id="tim" class="py-28 px-6 bg-gray-950 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <div class="text-amber-400 font-black tracking-widest text-xs uppercase mb-4">Our Team</div>
-                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">Anggota Kelompok</h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-                    Enam mahasiswa Teknik Informatika yang berkolaborasi dalam pengerjaan proyek akhir semester.
-                </p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white tracking-tight">
+                    Anggota Tim
+                </h2>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Member 1 -->
-                <article class="p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-emerald-500/50 hover:-translate-y-2 transition duration-500">
-                    <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-emerald-400 mb-6">AR</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Lorem Ipsum</h3>
-                    <p class="text-sm font-mono text-gray-500 mb-2">00000000000001</p>
-                    <p class="text-sm text-emerald-400 font-semibold mb-4">Teknik Informatika</p>
+                <?php foreach ($members as $i => $m): ?>
+                <article
+                    onclick="openMemberModal(<?= $i ?>)"
+                    class="cursor-pointer p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-emerald-500/50 hover:-translate-y-2 transition duration-500"
+                >
+                    <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-emerald-400 mb-6">
+                        <?= htmlspecialchars($m['initials']) ?>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-1"><?= htmlspecialchars($m['name']) ?></h3>
+                    <p class="text-sm font-mono text-gray-500 mb-2"><?= htmlspecialchars($m['nim']) ?></p>
+                    <p class="text-sm text-emerald-400 font-semibold mb-4"><?= htmlspecialchars($m['major']) ?></p>
                     <p class="text-sm text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        <?= htmlspecialchars($m['summary']) ?>
                     </p>
                 </article>
-
-                <!-- Member 2 -->
-                <article class="p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-blue-500/50 hover:-translate-y-2 transition duration-500">
-                    <div class="w-16 h-16 bg-blue-500/10 border border-blue-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-blue-400 mb-6">SN</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Lorem Ipsum</h3>
-                    <p class="text-sm font-mono text-gray-500 mb-2">00000000000002</p>
-                    <p class="text-sm text-blue-400 font-semibold mb-4">Teknik Informatika</p>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
-                </article>
-
-                <!-- Member 3 -->
-                <article class="p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-purple-500/50 hover:-translate-y-2 transition duration-500">
-                    <div class="w-16 h-16 bg-purple-500/10 border border-purple-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-purple-400 mb-6">BS</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Lorem Ipsum</h3>
-                    <p class="text-sm font-mono text-gray-500 mb-2">00000000000003</p>
-                    <p class="text-sm text-purple-400 font-semibold mb-4">Teknik Informatika</p>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
-                </article>
-
-                <!-- Member 4 -->
-                <article class="p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-amber-500/50 hover:-translate-y-2 transition duration-500">
-                    <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-amber-400 mb-6">DK</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Lorem Ipsum</h3>
-                    <p class="text-sm font-mono text-gray-500 mb-2">00000000000004</p>
-                    <p class="text-sm text-amber-400 font-semibold mb-4">Teknik Informatika</p>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
-                </article>
-
-                <!-- Member 5 -->
-                <article class="p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-rose-500/50 hover:-translate-y-2 transition duration-500">
-                    <div class="w-16 h-16 bg-rose-500/10 border border-rose-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-rose-400 mb-6">FM</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Lorem Ipsum</h3>
-                    <p class="text-sm font-mono text-gray-500 mb-2">00000000000005</p>
-                    <p class="text-sm text-rose-400 font-semibold mb-4">Teknik Informatika</p>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
-                </article>
-
-                <!-- Member 6 -->
-                <article class="p-8 bg-gray-950 rounded-3xl border border-gray-800 hover:border-cyan-500/50 hover:-translate-y-2 transition duration-500">
-                    <div class="w-16 h-16 bg-cyan-500/10 border border-cyan-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-cyan-400 mb-6">GP</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Lorem Ipsum</h3>
-                    <p class="text-sm font-mono text-gray-500 mb-2">00000000000006</p>
-                    <p class="text-sm text-cyan-400 font-semibold mb-4">Teknik Informatika</p>
-                    <p class="text-sm text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
-                </article>
-
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
+
+    <dialog id="memberModal">
+        <div class="bg-gray-950 border border-gray-800 rounded-3xl p-8 relative">
+            <button
+                onclick="document.getElementById('memberModal').close()"
+                class="absolute top-5 right-5 text-gray-500 hover:text-white transition"
+                aria-label="Close"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <div id="modalInitials" class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-2xl font-black text-emerald-400 mb-6"></div>
+            <h3 id="modalName" class="text-xl font-bold text-white mb-1"></h3>
+            <p id="modalNim" class="text-sm font-mono text-gray-500 mb-2"></p>
+            <p id="modalMajor" class="text-sm text-emerald-400 font-semibold mb-4"></p>
+            <p id="modalDetail" class="text-sm text-gray-400 leading-relaxed mb-6"></p>
+
+            <div class="flex flex-col gap-2 border-t border-gray-800 pt-5 text-sm">
+                <div class="flex items-center gap-2 text-gray-400">
+                    <span class="text-gray-600">Email:</span>
+                    <span id="modalEmail" class="text-white"></span>
+                </div>
+                <div class="flex items-center gap-2 text-gray-400">
+                    <span class="text-gray-600">GitHub:</span>
+                    <a id="modalGithub" href="#" target="_blank" class="text-emerald-400 hover:underline"></a>
+                </div>
+            </div>
+        </div>
+    </dialog>
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="bg-gray-950 border-t border-gray-800 p-10 text-center text-gray-500 text-sm font-medium">
         <p>PBKK Tugas 1 &copy; 2026. Built with Laravel & Tailwind CSS.</p>
     </footer>
+
+    <script>
+        const members = <?= json_encode($members) ?>;
+
+        function openMemberModal(index) {
+            const m = members[index];
+            document.getElementById('modalInitials').textContent = m.initials;
+            document.getElementById('modalName').textContent = m.name;
+            document.getElementById('modalNim').textContent = m.nim;
+            document.getElementById('modalMajor').textContent = m.major;
+            document.getElementById('modalDetail').textContent = m.detail;
+            document.getElementById('modalEmail').textContent = m.email;
+            document.getElementById('modalGithub').textContent = m.github;
+            document.getElementById('modalGithub').href = m.github;
+
+            const dialog = document.getElementById('memberModal');
+            dialog.showModal();
+        }
+
+        document.getElementById('memberModal').addEventListener('click', function(e) {
+            if (e.target === this) this.close();
+        });
+    </script>
 
 </body>
 </html>
