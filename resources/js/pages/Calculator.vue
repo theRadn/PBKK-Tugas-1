@@ -8,15 +8,15 @@
         </div>
     </nav>
     <div
-        class="mx-auto flex min-h-screen flex-col items-center justify-center gap-4 py-10 font-sans sm:flex-row"
+        class="mx-auto flex min-h-screen w-full flex-col items-center justify-center gap-6 bg-gray-950 p-6 font-sans text-gray-100 sm:flex-row"
     >
         <!-- Calculator -->
         <div
-            class="w-80 min-w-0 rounded-2xl bg-gray-900 p-4 text-gray-100 shadow-2xl md:w-84"
+            class="w-80 min-w-0 rounded-2xl border border-gray-800 bg-gray-900 p-5 text-gray-100 shadow-2xl md:w-84"
         >
             <!-- Display Screen -->
             <div
-                class="mb-4 flex h-24 w-full min-w-0 flex-col justify-end overflow-hidden rounded-xl border border-gray-700/50 bg-black/40 p-4 text-right"
+                class="mb-4 flex h-24 w-full min-w-0 flex-col justify-end overflow-hidden rounded-xl border border-gray-800 bg-black/40 p-4 text-right shadow-inner"
             >
                 <div
                     class="h-4 w-full overflow-hidden text-xs tracking-wider text-gray-400 md:h-6 md:text-sm"
@@ -24,7 +24,7 @@
                     {{ previousOperation }}
                 </div>
                 <div
-                    class="w-full truncate text-xl font-bold tracking-wide md:text-2xl"
+                    class="w-full truncate text-xl font-bold tracking-wide text-white md:text-2xl"
                 >
                     {{ currentInput || '0' }}
                 </div>
@@ -38,10 +38,10 @@
                         pressedKey === 'c' ||
                         pressedKey === 'C' ||
                         pressedKey === 'Escape'
-                            ? 'scale-95 bg-gray-600'
-                            : 'bg-gray-700'
+                            ? 'scale-95 bg-gray-700'
+                            : 'bg-gray-800 hover:bg-gray-700'
                     "
-                    class="col-span-2 rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-600 active:scale-95"
+                    class="col-span-2 rounded-xl p-4 font-bold text-gray-300 transition duration-150 active:scale-95"
                 >
                     C
                 </button>
@@ -49,17 +49,17 @@
                     @click="deleteNumber"
                     :class="
                         pressedKey === 'Backspace' || pressedKey === 'Delete'
-                            ? 'scale-95 bg-gray-600'
-                            : 'bg-gray-700'
+                            ? 'scale-95 bg-gray-700'
+                            : 'bg-gray-800 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-600 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-300 transition duration-150 active:scale-95"
                 >
                     DEL
                 </button>
                 <button
                     @click="chooseOperation('/')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '/' }"
-                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
+                    class="rounded-xl bg-amber-700 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95 shadow-lg shadow-amber-950/50"
                 >
                     /
                 </button>
@@ -69,9 +69,9 @@
                     :class="
                         pressedKey === '7'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     7
                 </button>
@@ -80,9 +80,9 @@
                     :class="
                         pressedKey === '8'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     8
                 </button>
@@ -91,16 +91,16 @@
                     :class="
                         pressedKey === '9'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     9
                 </button>
                 <button
                     @click="chooseOperation('*')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '*' }"
-                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
+                    class="rounded-xl bg-amber-700 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95 shadow-lg shadow-amber-950/50"
                 >
                     *
                 </button>
@@ -110,9 +110,9 @@
                     :class="
                         pressedKey === '4'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     4
                 </button>
@@ -121,9 +121,9 @@
                     :class="
                         pressedKey === '5'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     5
                 </button>
@@ -132,16 +132,16 @@
                     :class="
                         pressedKey === '6'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     6
                 </button>
                 <button
                     @click="chooseOperation('-')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '-' }"
-                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
+                    class="rounded-xl bg-amber-700 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95 shadow-lg shadow-amber-950/50"
                 >
                     -
                 </button>
@@ -151,9 +151,9 @@
                     :class="
                         pressedKey === '1'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     1
                 </button>
@@ -162,9 +162,9 @@
                     :class="
                         pressedKey === '2'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     2
                 </button>
@@ -173,16 +173,16 @@
                     :class="
                         pressedKey === '3'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     3
                 </button>
                 <button
                     @click="chooseOperation('+')"
                     :class="{ 'scale-95 bg-amber-600': pressedKey === '+' }"
-                    class="rounded-xl bg-amber-500 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95"
+                    class="rounded-xl bg-amber-700 p-4 font-bold text-white transition duration-150 hover:bg-amber-600 active:scale-95 shadow-lg shadow-amber-950/50"
                 >
                     +
                 </button>
@@ -192,9 +192,9 @@
                     :class="
                         pressedKey === '0'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="col-span-2 rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="col-span-2 rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     0
                 </button>
@@ -203,19 +203,19 @@
                     :class="
                         pressedKey === '.'
                             ? 'scale-95 bg-gray-700'
-                            : 'bg-gray-800'
+                            : 'bg-gray-800/80 hover:bg-gray-700'
                     "
-                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 hover:bg-gray-700 active:scale-95"
+                    class="rounded-xl p-4 font-bold text-gray-100 transition duration-150 active:scale-95"
                 >
                     .
                 </button>
                 <button
                     @click="compute"
                     :class="{
-                        'scale-95 bg-emerald-700':
+                        'scale-95 bg-emerald-500':
                             pressedKey === 'Enter' || pressedKey === '=',
                     }"
-                    class="rounded-xl bg-emerald-600 p-4 font-bold text-white transition duration-150 hover:bg-emerald-700 active:scale-95"
+                    class="rounded-xl bg-emerald-700 p-4 font-bold text-white transition duration-150 hover:bg-emerald-600 active:scale-95 shadow-lg shadow-emerald-950/50"
                 >
                     =
                 </button>
@@ -224,7 +224,7 @@
 
         <!-- History Panel -->
         <div
-            class="flex h-[416px] w-80 flex-col rounded-2xl border border-gray-700/50 bg-gray-900 p-4 text-gray-100 shadow-2xl sm:w-56"
+            class="flex h-[416px] w-80 flex-col rounded-2xl border border-gray-800 bg-gray-900 p-5 text-gray-100 shadow-2xl sm:w-56"
         >
             <div
                 class="mb-3 flex items-center justify-between border-b border-gray-800 pb-2 text-sm font-semibold text-gray-400"
@@ -233,7 +233,7 @@
                 <button
                     v-if="history.length > 0"
                     @click="clearHistory"
-                    class="cursor-pointer text-xs text-red-400 hover:text-red-300"
+                    class="cursor-pointer text-xs text-red-400 hover:text-red-300 transition"
                 >
                     Clear
                 </button>
@@ -251,7 +251,7 @@
                     v-for="(item, index) in history"
                     :key="index"
                     @click="loadHistoryItem(item)"
-                    class="cursor-pointer rounded-xl border border-gray-800 bg-black/30 p-2.5 text-right transition duration-150 hover:border-amber-500/50 hover:bg-black/50"
+                    class="cursor-pointer rounded-xl border border-gray-800 bg-black/30 p-2.5 text-right transition duration-150 hover:border-emerald-500/50 hover:bg-black/50"
                 >
                     <div class="text-xs text-gray-400">
                         {{ item.expression }}
