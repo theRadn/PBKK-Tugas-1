@@ -6,18 +6,17 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index()
+    public function index() { return view('home'); }
+
+    public function about() { return view('about'); }
+
+    // Rute: /agent/{tema?}
+    // Parameter diberi nilai default 'General Assistant Agent' jika kosong
+    public function agent($tema = 'General Assistant Agent')
     {
-        return view('home');
+        // Mengirimkan variabel $tema ke tampilan agent.blade.php
+        return view('agent', compact('tema'));
     }
 
-    public function about()
-    {
-        return view('about');
-    }
-
-    public function project()
-    {
-        return view('project');
-    }
+    public function mahasiswaDetail($nrp) { return view('mahasiswa', compact('nrp')); }
 }
